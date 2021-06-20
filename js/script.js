@@ -5,20 +5,37 @@
 
 
 
-//*Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+//*filter
+// const numbers = [10,11,12,13,14,15,16,17,18,19];
 
-//filter
+// function newRange(array,numMin,numMax){
+
+//   const range = array.filter((numero,index) => {
+//     if(index >= numMin && index <= numMax){
+//       // console.log(index,numero);
+//       return numero;
+//     }
+//   });
+//   // console.log(range);
+//   return range;
+// }
+
+// const range = newRange(numbers,3,6);
+// // console.log(range);
+
+
+// //*forEach
 const numbers = [10,11,12,13,14,15,16,17,18,19];
+const range = [];
 
 function newRange(array,numMin,numMax){
-
-  const range = array.filter((numero,index) => {
-    if(index > numMin && index < numMax){
-      return numero;
+  array.forEach((item,index) => {
+    if(index >= numMin && index <= numMax){
+      range.push(item)
     }
   });
-  return range;
 }
 
-const range = newRange(numbers,3,6);
+newRange (numbers,3,6)
 console.log(range);
+
