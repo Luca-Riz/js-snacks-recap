@@ -24,18 +24,40 @@
 // // console.log(range);
 
 
-// //*forEach
+//*forEach
+// const numbers = [10,11,12,13,14,15,16,17,18,19];
+
+// function newRange(array,numMin,numMax){
+//   const range = [];
+//   array.forEach((item,index) => {
+//     if(index >= numMin && index <= numMax){
+//       range.push(item)
+//     }
+//   });
+//   return range;
+// }
+
+// console.log(newRange(numbers,3,6));
+// console.log(range);
+
+//*altre prove con filter
+//*filter
+// const numbers = [10,11,12,13,14,15,16,17,18,19];
+
+// function newRange(array,numMin,numMax){
+
+//   const range = array.filter((numero,index) => index >= numMin && index <= numMax);
+//   return range;
+// }
+
+
+// const range = newRange(numbers,3,6);
+// console.log(range);
+
+
+//*filter
 const numbers = [10,11,12,13,14,15,16,17,18,19];
-const range = [];
 
-function newRange(array,numMin,numMax){
-  array.forEach((item,index) => {
-    if(index >= numMin && index <= numMax){
-      range.push(item)
-    }
-  });
-}
+const range = numbers.filter((numero,index) => index >= 3 && index <= 7);
 
-newRange (numbers,3,6)
 console.log(range);
-
